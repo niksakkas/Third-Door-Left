@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class specialCollisions : MonoBehaviour
@@ -10,5 +9,15 @@ public class specialCollisions : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+        if (collision.collider.tag == "spikes")
+        {
+            YOUDIED();
+        }
+    }
+    private void YOUDIED()
+    {
+        Debug.Log("rip");
+        Destroy(gameObject);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().path);
     }
 }

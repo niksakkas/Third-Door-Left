@@ -6,7 +6,7 @@ public class ghostPlayerMovement : MonoBehaviour
 {
     public Rigidbody2D m_Rigidbody2D;
     public Animator animator;
-    private float speed = 6.5f;
+    private float speed = 4.5f;
     private float horizontalMove = 0f;
     private float verticalMove = 0f;
     bool facing_right = false;
