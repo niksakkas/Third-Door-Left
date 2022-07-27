@@ -23,14 +23,21 @@ public class globalController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        
+        //check if game started
         if (Input.GetKeyDown(KeyCode.Space) && ghostStarted == true)
         {
             ghostEnded = true;
             playerAnimator.SetBool("ghostEnded", true);
 
         }
+        //check if player wants to restart
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            Debug.Log("Restarting");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().path);
 
+        }
+        
     }
 
     void FixedUpdate()
@@ -51,26 +58,32 @@ public class globalController : MonoBehaviour
             MovePlayer();
         }
     }
-    void MovePlayer(){
+
+    void MovePlayer()
+    {
 
         //move the player to mimic the ghosts movement
-        if (ghostPositions.Count > 1)
+        if (ghostPositions.Count > 0)
         {
             HandlePlayerAnimation();
             player.position = ghostPositions[0];
             ghostPositions.RemoveAt(0);
         }
+        else {
+            Debug.Log("Failed, press R to try again");
+
+        }
         //Destroy(ghostPlayer);
         if (FindObjectsOfType<cookieHandler>().Length == 0)
         {
-            Debug.Log("You won!");
+            Debug.Log("GG EZ");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
     void HandlePlayerAnimation()
     {
         Vector2 interval = ghostPositions[0] - player.position;
-        if(interval.x != 0)
+        if (interval.x != 0)
         {
             playerAnimator.SetInteger("direction", 0);
             playerAnimator.SetFloat("speed", 10);
