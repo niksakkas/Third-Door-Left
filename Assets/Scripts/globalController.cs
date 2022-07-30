@@ -11,6 +11,8 @@ public class globalController : MonoBehaviour
     private bool ghostStarted = false;
     private bool ghostEnded = false;
     private bool playerFacingRight = false;
+    private float minInterval = 0.04f; //if the interval is smaller than this, it's propably because of a collision and the
+                                       //player's sprite shouldnt flip even though he is moving in the opposite direction
 
     List<Vector2> ghostPositions = new List<Vector2>();
 
@@ -31,13 +33,13 @@ public class globalController : MonoBehaviour
 
         }
         //check if player wants to restart
-        if(Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             Debug.Log("Restarting");
             SceneManager.LoadScene(SceneManager.GetActiveScene().path);
 
         }
-        
+
     }
 
     void FixedUpdate()
@@ -56,12 +58,16 @@ public class globalController : MonoBehaviour
         if (ghostEnded == true)
         {
             MovePlayer();
+            MovePlayer();
         }
     }
 
     void MovePlayer()
     {
-
+        if (playerAnimator.GetBool("playerDead") == true)
+        {
+            return;
+        }
         //move the player to mimic the ghosts movement
         if (ghostPositions.Count > 0)
         {
@@ -69,7 +75,8 @@ public class globalController : MonoBehaviour
             player.position = ghostPositions[0];
             ghostPositions.RemoveAt(0);
         }
-        else {
+        else
+        {
             Debug.Log("Failed, press R to try again");
 
         }
@@ -87,23 +94,23 @@ public class globalController : MonoBehaviour
         {
             playerAnimator.SetInteger("direction", 0);
             playerAnimator.SetFloat("speed", 10);
-            if (interval.x > 0 && !playerFacingRight)
+            if (interval.x > minInterval && !playerFacingRight)
             {
                 FlipPlayer();
             }
-            if (interval.x < 0 && playerFacingRight)
+            if (interval.x < -0.04 && playerFacingRight)
             {
                 FlipPlayer();
             }
         }
         else if (interval.y != 0)
         {
-            if (interval.y > 0)
+            if (interval.y > 0.04)
             {
                 playerAnimator.SetInteger("direction", 1);
                 playerAnimator.SetFloat("speed", 10);
             }
-            if (interval.y < 0)
+            if (interval.y < -0.04)
             {
                 playerAnimator.SetInteger("direction", -1);
                 playerAnimator.SetFloat("speed", 10);

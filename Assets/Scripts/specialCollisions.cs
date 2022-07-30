@@ -1,8 +1,15 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using System;
+using System.Threading.Tasks;
+using System.Collections;
 
 public class specialCollisions : MonoBehaviour
 {
+    
+    public GameObject player;
+    public Animator playerAnimator;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.collider.tag == "cookie")
@@ -11,13 +18,19 @@ public class specialCollisions : MonoBehaviour
         }
         if (collision.collider.tag == "spikes")
         {
-            YOUDIED();
+            StartCoroutine(YOUDIED());
         }
     }
-    private void YOUDIED()
+
+    IEnumerator YOUDIED()
     {
-        Debug.Log("rip");
-        Destroy(gameObject);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().path);
+        playerAnimator.SetBool("playerDead", true);
+        Debug.Log("YOU DIED");
+
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().path);
+
     }
+
 }
