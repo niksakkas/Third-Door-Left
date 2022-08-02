@@ -78,7 +78,6 @@ public class globalController : MonoBehaviour
         else
         {
             Debug.Log("Failed, press R to try again");
-
         }
         //Destroy(ghostPlayer);
         if (FindObjectsOfType<cookieHandler>().Length == 0)
