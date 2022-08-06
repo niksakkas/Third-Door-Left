@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 714647147047374139}
   - component: {fileID: 5884455424365826669}
   - component: {fileID: 714647147047374128}
+  - component: {fileID: 3385003173470311821}
+  - component: {fileID: 3728541212364766306}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -174,5 +176,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eb2102a6d4bc0546930389fbbb7d964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   playerAnimator: {fileID: 714647147047374133}
+--- !u!114 &3385003173470311821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714647147047374138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 688246855
+      Data2: 1238498903
+      Data3: -9381966
+      Data4: -1084367247
+    Path: event:/footstep_1
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &3728541212364766306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714647147047374138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee4e146d97bea2a409d7d744709f3ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

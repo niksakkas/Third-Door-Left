@@ -7,7 +7,6 @@ using System.Collections;
 public class specialCollisions : MonoBehaviour
 {
     
-    public GameObject player;
     public Animator playerAnimator;
 
     private void OnCollisionEnter2D(Collision2D collision)

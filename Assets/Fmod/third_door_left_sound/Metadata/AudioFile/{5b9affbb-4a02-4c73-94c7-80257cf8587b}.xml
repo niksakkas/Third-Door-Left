@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{5b9affbb-4a02-4c73-94c7-80257cf8587b}">
+		<property name="assetPath">
+			<value>robot-walk.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>16</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>1.0209999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{33ff5f6c-3b25-4f86-9375-e44d2ac1efb0}</destination>
+		</relationship>
+	</object>
+</objects>

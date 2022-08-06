@@ -2700,6 +2700,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 714647147047374134, guid: 39ccff10217da144082567b02493992a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 714647147047374135, guid: 39ccff10217da144082567b02493992a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2747,6 +2751,22 @@ PrefabInstance:
     - target: {fileID: 714647147047374138, guid: 39ccff10217da144082567b02493992a, type: 3}
       propertyPath: m_Name
       value: Robot
+      objectReference: {fileID: 0}
+    - target: {fileID: 714647147047374138, guid: 39ccff10217da144082567b02493992a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 714647147047374139, guid: 39ccff10217da144082567b02493992a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3385003173470311821, guid: 39ccff10217da144082567b02493992a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884455424365826669, guid: 39ccff10217da144082567b02493992a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39ccff10217da144082567b02493992a, type: 3}

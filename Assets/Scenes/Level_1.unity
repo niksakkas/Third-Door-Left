@@ -1718,6 +1718,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4657675370810681416, guid: ffb198e1ed01c9e448c15c3d5709e4df, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4657675370810681417, guid: ffb198e1ed01c9e448c15c3d5709e4df, type: 3}
       propertyPath: m_Name
       value: Ghost_Robot

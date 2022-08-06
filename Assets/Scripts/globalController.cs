@@ -58,7 +58,7 @@ public class globalController : MonoBehaviour
         if (ghostEnded == true)
         {
             MovePlayer();
-            MovePlayer();
+            // MovePlayer();
         }
     }
 
