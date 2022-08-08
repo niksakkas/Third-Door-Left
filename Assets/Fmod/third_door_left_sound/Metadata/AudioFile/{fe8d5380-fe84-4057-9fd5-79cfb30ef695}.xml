@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{fe8d5380-fe84-4057-9fd5-79cfb30ef695}">
+		<property name="assetPath">
+			<value>robot_calculate.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>11.016</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{33ff5f6c-3b25-4f86-9375-e44d2ac1efb0}</destination>
+		</relationship>
+	</object>
+</objects>
