@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class fmodPlayer : MonoBehaviour
 {
-void playSound(string path){
+public void playSound(string path){
     FMODUnity.RuntimeManager.PlayOneShot(path, GetComponent<Transform>().position);
 }
 }

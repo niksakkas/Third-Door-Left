@@ -2162,6 +2162,17 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 714647147047374133, guid: 39ccff10217da144082567b02493992a, type: 3}
   m_PrefabInstance: {fileID: 286058475}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1389923467 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3728541212364766306, guid: 39ccff10217da144082567b02493992a, type: 3}
+  m_PrefabInstance: {fileID: 286058475}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee4e146d97bea2a409d7d744709f3ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1417475757 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2349241552225816863, guid: 48b99e74ac74dd649b2f9c39e9a1226d, type: 3}
@@ -2244,9 +2255,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 609788642}
     - target: {fileID: 4372245847954281521, guid: 6f17477b6dd762d49a137d710bc6e402, type: 3}
+      propertyPath: soundScript
+      value: 
+      objectReference: {fileID: 1389923467}
+    - target: {fileID: 4372245847954281521, guid: 6f17477b6dd762d49a137d710bc6e402, type: 3}
       propertyPath: playerAnimator
       value: 
       objectReference: {fileID: 1389923466}
+    - target: {fileID: 4372245847954281521, guid: 6f17477b6dd762d49a137d710bc6e402, type: 3}
+      propertyPath: robotDeathSoundPath
+      value: event:/robot_calculate
+      objectReference: {fileID: 0}
     - target: {fileID: 4372245847954281534, guid: 6f17477b6dd762d49a137d710bc6e402, type: 3}
       propertyPath: m_RootOrder
       value: 3

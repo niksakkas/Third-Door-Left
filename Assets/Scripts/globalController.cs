@@ -1,5 +1,6 @@
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class globalController : MonoBehaviour
@@ -13,6 +14,9 @@ public class globalController : MonoBehaviour
     private bool playerFacingRight = false;
     private float minInterval = 0.04f; //if the interval is smaller than this, it's propably because of a collision and the
                                        //player's sprite shouldnt flip even though he is moving in the opposite direction
+    //sound                                   
+    public string robotDeathSoundPath = "event:/robot_shutting_down";
+    public fmodPlayer soundScript;                                       
 
     List<Vector2> ghostPositions = new List<Vector2>();
 
@@ -20,11 +24,13 @@ public class globalController : MonoBehaviour
     void Start()
     {
         cookieList = FindObjectsOfType<cookieHandler>();
+        StartCoroutine(handleCalculatingSound());
     }
 
     // Update is called once per frame
     private void Update()
     {
+        
         //check if game started
         if (Input.GetKeyDown(KeyCode.Space) && ghostStarted == true)
         {
@@ -130,4 +136,12 @@ public class globalController : MonoBehaviour
         theScale.x *= -1;
         player.transform.localScale = theScale;
     }
+    IEnumerator handleCalculatingSound()
+    {
+        yield return new WaitUntil(()=> ghostStarted == true);
+        soundScript.playSound(robotDeathSoundPath);
+    }
 }
+
+
+

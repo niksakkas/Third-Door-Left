@@ -1979,6 +1979,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot
       objectReference: {fileID: 0}
+    - target: {fileID: 3385003173470311821, guid: 39ccff10217da144082567b02493992a, type: 3}
+      propertyPath: EventReference.Path
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3385003173470311821, guid: 39ccff10217da144082567b02493992a, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3385003173470311821, guid: 39ccff10217da144082567b02493992a, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3385003173470311821, guid: 39ccff10217da144082567b02493992a, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3385003173470311821, guid: 39ccff10217da144082567b02493992a, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39ccff10217da144082567b02493992a, type: 3}
 --- !u!1 &361453605
@@ -2576,7 +2596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2349241552225816863, guid: 48b99e74ac74dd649b2f9c39e9a1226d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.88
+      value: -0.42
       objectReference: {fileID: 0}
     - target: {fileID: 2349241552225816863, guid: 48b99e74ac74dd649b2f9c39e9a1226d, type: 3}
       propertyPath: m_LocalPosition.y

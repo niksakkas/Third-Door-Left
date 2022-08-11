@@ -9,6 +9,7 @@ public class specialCollisions : MonoBehaviour
     
     public Animator playerAnimator;
 
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.collider.tag == "cookie")
@@ -25,11 +26,8 @@ public class specialCollisions : MonoBehaviour
     {
         playerAnimator.SetBool("playerDead", true);
         Debug.Log("YOU DIED");
-
         yield return new WaitForSeconds(1);
-
         SceneManager.LoadScene(SceneManager.GetActiveScene().path);
-
     }
 
 }
