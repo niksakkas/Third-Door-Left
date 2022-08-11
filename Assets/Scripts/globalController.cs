@@ -140,6 +140,15 @@ public class globalController : MonoBehaviour
     {
         yield return new WaitUntil(()=> ghostStarted == true);
         soundScript.playSound(robotDeathSoundPath);
+
+        yield return new WaitUntil(()=> ghostEnded == true);
+        StopAllPlayerEvents();
+    }
+
+    void StopAllPlayerEvents()
+    {
+        FMOD.Studio.Bus playerBus = FMODUnity.RuntimeManager.GetBus("bus:/");
+        playerBus.stopAllEvents(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }
 
